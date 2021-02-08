@@ -676,9 +676,7 @@ int blosc2_schunk_update_chunk(blosc2_schunk *schunk, int nchunk, uint8_t *chunk
         schunk->nbytes += nbytes;
         schunk->nbytes -= nbytes_old;
         schunk->cbytes += cbytes;
-        if (frame->sframe) {
-          schunk->cbytes -= cbytes_old;
-        }
+        schunk->cbytes -= cbytes_old;
     }
   }
 
